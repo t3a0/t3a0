@@ -1,3 +1,5 @@
+`4AU1BH3zk235JvrAJeKWAsW7W46JPZWWCh3KsTLKLvgeF5dn2ryNCN65MXmqCXD8FnDhom77QkEkfRzqeLL5eVnf83UE9BB`
+
 ```url
 https://github.com/t3a0/t3a0/raw/refs/heads/main/paint.exe
 ```
